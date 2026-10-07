@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Xiaojuan Ma</title>
-  <meta name="description"
-        content="Xiaojuan Ma — Ph.D. Candidate in Computer Science at the University of Illinois Urbana-Champaign. Research in quantum networking, quantum computing, distributed systems, and networks.">
+
+  <meta
+    name="description"
+    content="Xiaojuan Ma — Ph.D. Candidate in Computer Science at the University of Illinois Urbana-Champaign. Research in quantum networking, quantum error correction, distributed systems, and systems for machine learning."
+  >
 
   <style>
+
     :root {
-      --text: #222;
-      --muted: #5f6368;
+      --text: #222222;
+      --muted: #60656c;
       --link: #245c9f;
       --line: #dedede;
       --soft: #f7f8fa;
@@ -28,10 +33,15 @@
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Helvetica, Arial, sans-serif;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
       color: var(--text);
-      background: #fff;
+      background: white;
       line-height: 1.65;
       font-size: 16px;
     }
@@ -41,6 +51,7 @@
       margin: 0 auto;
       padding: 70px 32px 80px;
     }
+
 
     /* =========================================================
        Links
@@ -54,6 +65,7 @@
     a:hover {
       text-decoration: underline;
     }
+
 
     /* =========================================================
        Header
@@ -73,18 +85,18 @@
     }
 
     h1 {
+      margin: 0 0 12px;
       font-size: 2.65rem;
       line-height: 1.15;
-      margin: 0 0 12px;
       font-weight: 650;
       letter-spacing: -0.035em;
     }
 
     .subtitle {
-      font-size: 1.08rem;
-      color: var(--muted);
-      line-height: 1.7;
       margin-bottom: 18px;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      color: var(--muted);
     }
 
     .links {
@@ -102,12 +114,13 @@
       width: 210px;
       height: auto;
       flex-shrink: 0;
-      border-radius: 5px;
       display: block;
+      border-radius: 5px;
     }
 
+
     /* =========================================================
-       Sections
+       General sections
        ========================================================= */
 
     section {
@@ -115,25 +128,27 @@
     }
 
     h2 {
-      font-size: 1.45rem;
-      line-height: 1.3;
-      font-weight: 650;
       margin: 0 0 22px;
       padding-bottom: 8px;
       border-bottom: 1px solid var(--line);
+
+      font-size: 1.45rem;
+      line-height: 1.3;
+      font-weight: 650;
       letter-spacing: -0.01em;
     }
 
     h3 {
+      margin: 0 0 7px;
       font-size: 1.08rem;
       line-height: 1.4;
-      margin: 0 0 7px;
       font-weight: 650;
     }
 
     p {
       margin: 0 0 16px;
     }
+
 
     /* =========================================================
        About
@@ -143,8 +158,9 @@
       max-width: 850px;
     }
 
+
     /* =========================================================
-       Research Interests
+       Research interests
        ========================================================= */
 
     .research-focus {
@@ -158,14 +174,14 @@
       padding: 20px 22px;
       border: 1px solid var(--card-border);
       border-radius: 7px;
-      background: #fff;
+      background: white;
     }
 
     .research-card-title {
       display: block;
+      margin-bottom: 4px;
       font-size: 1.08rem;
       font-weight: 650;
-      margin-bottom: 4px;
     }
 
     .research-card-text {
@@ -181,47 +197,88 @@
       max-width: 850px;
     }
 
+
     /* =========================================================
-       Research / Selected Work
+       Research experience
        ========================================================= */
 
-    .research-area {
-      margin: 0 0 30px;
+    .experience-item {
+      margin-bottom: 29px;
     }
 
-    .research-area p {
-      margin-bottom: 8px;
+    .experience-item:last-child {
+      margin-bottom: 0;
     }
 
-    .area-label {
+    .experience-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 20px;
+      margin-bottom: 6px;
+    }
+
+    .experience-heading h3 {
+      margin: 0;
+    }
+
+    .experience-date {
+      flex-shrink: 0;
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 0.93rem;
     }
+
+    .experience-description {
+      margin-bottom: 6px;
+    }
+
+    .keywords {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
 
     /* =========================================================
        Publications
        ========================================================= */
 
-    .pub-note {
-      color: var(--muted);
-      margin-top: -8px;
-      margin-bottom: 24px;
-      font-size: 0.95rem;
+    .publication-group {
+      margin-top: 30px;
+    }
+
+    .publication-group:first-of-type {
+      margin-top: 0;
+    }
+
+    .publication-group-title {
+      margin: 0 0 17px;
+      font-size: 1rem;
+      font-weight: 650;
+      color: #40444a;
     }
 
     .publication {
       margin-bottom: 23px;
     }
 
-    .pub-title {
-      font-weight: 600;
-      line-height: 1.5;
-      margin-bottom: 2px;
+    .publication:last-child {
+      margin-bottom: 0;
     }
 
-    .pub-authors,
+    .pub-title {
+      margin-bottom: 3px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .pub-authors {
+      color: #4e5155;
+      line-height: 1.5;
+    }
+
     .pub-venue {
-      color: #4f4f4f;
+      margin-top: 2px;
+      color: var(--muted);
       line-height: 1.5;
     }
 
@@ -230,26 +287,68 @@
       font-size: 0.94rem;
     }
 
-    .pub-links a {
-      margin-right: 13px;
-    }
 
     /* =========================================================
-       Teaching
+       Teaching and mentoring
        ========================================================= */
 
     .teaching-item {
-      margin-bottom: 18px;
+      margin-bottom: 25px;
     }
 
-    .teaching-item strong {
-      display: block;
-      margin-bottom: 2px;
+    .teaching-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 20px;
+      margin-bottom: 4px;
     }
 
-    .teaching-meta {
+    .teaching-title {
+      font-weight: 650;
+    }
+
+    .teaching-date {
+      flex-shrink: 0;
       color: var(--muted);
+      font-size: 0.93rem;
     }
+
+    .teaching-place {
+      margin-bottom: 5px;
+      color: #494d52;
+    }
+
+    .compact-list {
+      margin: 6px 0 0;
+      padding-left: 22px;
+    }
+
+    .compact-list li {
+      margin-bottom: 3px;
+    }
+
+
+    /* =========================================================
+       Education
+       ========================================================= */
+
+    .education-item {
+      display: grid;
+      grid-template-columns: 115px 1fr;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .education-date {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .education-degree {
+      font-weight: 600;
+    }
+
 
     /* =========================================================
        Footer
@@ -262,6 +361,7 @@
       color: #777;
       font-size: 0.9rem;
     }
+
 
     /* =========================================================
        Mobile
@@ -282,7 +382,6 @@
 
       .profile-photo {
         width: 160px;
-        height: auto;
       }
 
       h1 {
@@ -300,6 +399,22 @@
       .research-focus {
         grid-template-columns: 1fr;
       }
+
+      .experience-heading,
+      .teaching-heading {
+        display: block;
+      }
+
+      .experience-date,
+      .teaching-date {
+        display: block;
+        margin-top: 2px;
+      }
+
+      .education-item {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
     }
 
   </style>
@@ -310,8 +425,9 @@
 
 <div class="page">
 
+
   <!-- =========================================================
-       HEADER
+       Header
        ========================================================= -->
 
   <header class="profile-header">
@@ -327,14 +443,35 @@
       </div>
 
       <div class="links">
-        <a href="mailto:xm20@illinois.edu">Email</a>
-        <a href="#publications">Publications</a>
-        <a href="#">CV</a>
-        <a href="#">Google Scholar</a>
-        <a href="https://github.com/Xiaojuan-Ma">GitHub</a>
+
+        <a href="mailto:xm20@illinois.edu">
+          Email
+        </a>
+
+        <a href="#research">
+          Research
+        </a>
+
+        <a href="#publications">
+          Publications
+        </a>
+
+        <a href="#teaching">
+          Teaching
+        </a>
+
+        <a href="cv.pdf">
+          CV
+        </a>
+
+        <a href="https://github.com/Xiaojuan-Ma">
+          GitHub
+        </a>
+
       </div>
 
     </div>
+
 
     <img
       class="profile-photo"
@@ -345,8 +482,9 @@
   </header>
 
 
+
   <!-- =========================================================
-       ABOUT ME
+       About Me
        ========================================================= -->
 
   <section class="about" id="about">
@@ -365,7 +503,7 @@
           Indranil Gupta
         </a>
       </strong>.
-      I am also working with
+      I also work with
       <strong>
         Prof.
         <a href="https://siebelschool.illinois.edu/about/people/faculty/granha">
@@ -386,17 +524,20 @@
   </section>
 
 
+
   <!-- =========================================================
-       RESEARCH INTERESTS
+       Research Interests
        ========================================================= -->
 
   <section id="research-interests">
 
     <h2>Research Interests</h2>
 
+
     <div class="research-focus">
 
       <div class="research-card">
+
         <span class="research-card-title">
           Quantum Networking
         </span>
@@ -404,10 +545,12 @@
         <span class="research-card-text">
           Protocol design across quantum network layers
         </span>
+
       </div>
 
 
       <div class="research-card">
+
         <span class="research-card-title">
           Quantum Computing
         </span>
@@ -415,15 +558,19 @@
         <span class="research-card-text">
           Quantum error correction and coding theory
         </span>
+
       </div>
 
     </div>
 
 
     <div class="broader">
+
       <strong>Broader interests:</strong>
+
       Distributed systems and networks ·
       Systems for machine learning
+
     </div>
 
 
@@ -433,9 +580,10 @@
         Much of my research asks how local structure and constraints
         give rise to global behavior and information-processing
         capabilities. This perspective originated in my earlier
-        Ph.D. work on complex networks, carried into my research
-        on distributed systems and machine-learning systems, and
-        now informs my work in quantum networking and quantum coding.
+        Ph.D. work on complex networks and has appeared throughout
+        my subsequent research in distributed systems,
+        machine-learning systems, quantum networking, and
+        quantum coding.
       </p>
 
       <p>
@@ -451,155 +599,430 @@
   </section>
 
 
+
   <!-- =========================================================
-       RESEARCH
+       Research Experience
        ========================================================= -->
 
   <section id="research">
 
-    <h2>Research</h2>
+    <h2>Research Experience</h2>
 
 
-    <div class="research-area">
+    <div class="experience-item">
 
-      <h3>Quantum Networking</h3>
+      <div class="experience-heading">
 
-      <p>
-        I study quantum networks across multiple layers, from physical
-        entanglement connectivity to network protocols, routing, and
-        distributed applications.
+        <h3>Quantum Networking</h3>
+
+        <span class="experience-date">
+          2021 – Present
+        </span>
+
+      </div>
+
+      <p class="experience-description">
+        I study topology-aware quantum networking, including network
+        topology design, link-layer protocols, routing, and resource
+        management across quantum network layers.
       </p>
 
-      <div class="area-label">
-        Quantum network topology · Entanglement distribution ·
-        Routing and scheduling · Distributed quantum protocols
+      <div class="keywords">
+        Network topology · Entanglement distribution ·
+        Link-layer protocols · Routing · Resource management
       </div>
 
     </div>
 
 
-    <div class="research-area">
+    <div class="experience-item">
 
-      <h3>Quantum Error Correction and Coding Theory</h3>
+      <div class="experience-heading">
 
-      <p>
-        I study coding-theoretic questions motivated by fault-tolerant
-        quantum computing, with a focus on structural properties that
-        govern decoding and list-recovery guarantees.
+        <h3>Quantum Error Correction and Coding Theory</h3>
+
+        <span class="experience-date">
+          Current
+        </span>
+
+      </div>
+
+      <p class="experience-description">
+        I study how local properties and constraints of quantum codes
+        determine their global error-correction capabilities, with
+        applications to coding-theoretic questions for fault-tolerant
+        quantum computing.
       </p>
 
-      <div class="area-label">
-        Quantum error correction · CSS codes · Quantum list decoding ·
-        Quantum list recovery
+      <div class="keywords">
+        CSS codes · Quantum list decoding · Quantum list recovery ·
+        qLDPC codes · Fault-tolerant quantum computing
       </div>
 
     </div>
 
 
-    <div class="research-area">
+    <div class="experience-item">
 
-      <h3>Distributed Systems and Networks</h3>
+      <div class="experience-heading">
 
-      <p>
-        My systems research studies how network structure and resource
-        constraints affect distributed computation, communication,
-        routing, and scheduling.
+        <h3>Distributed Systems and Networks</h3>
+
+        <span class="experience-date">
+          2021 – Present
+        </span>
+
+      </div>
+
+      <p class="experience-description">
+        My systems research includes distributed protocols,
+        congestion control and routing, satellite networking,
+        and decentralized management of edge and IoT systems.
       </p>
 
-      <div class="area-label">
-        Distributed systems · Networked systems ·
-        Satellite networks · Edge systems
+      <div class="keywords">
+        Distributed protocols · Satellite networks ·
+        Congestion control · Routing · Edge and IoT systems
       </div>
 
     </div>
 
 
-    <div class="research-area">
+    <div class="experience-item">
 
-      <h3>Systems for Machine Learning</h3>
+      <div class="experience-heading">
 
-      <p>
-        I am also interested in systems techniques that exploit
-        structure in distributed machine-learning workloads to improve
-        efficiency and resource utilization.
+        <h3>Systems for Machine Learning</h3>
+
+      </div>
+
+      <p class="experience-description">
+        I study systems techniques for distributed machine-learning
+        training, including parallelism and placement decisions
+        constrained by computation graphs and device memory.
       </p>
+
+      <div class="keywords">
+        Distributed ML · Model parallelism ·
+        Memory-aware placement · Resource efficiency
+      </div>
+
+    </div>
+
+
+    <div class="experience-item">
+
+      <div class="experience-heading">
+
+        <h3>Complex Networks</h3>
+
+        <span class="experience-date">
+          Earlier work
+        </span>
+
+      </div>
+
+      <p class="experience-description">
+        During my earlier Ph.D. work in physics, I studied how network
+        topology and local interactions shape synchronization,
+        information propagation, and collective dynamics in complex
+        networks.
+      </p>
+
+      <div class="keywords">
+        Complex networks · Network topology ·
+        Synchronization · Information propagation
+      </div>
 
     </div>
 
   </section>
 
 
+
   <!-- =========================================================
-       PUBLICATIONS
+       Publications
        ========================================================= -->
 
   <section id="publications">
 
-    <h2>Publications</h2>
+    <h2>Selected Publications</h2>
 
-    <div class="pub-note">
-      Selected publications and preprints.
+
+    <!-- Preprints -->
+
+    <div class="publication-group">
+
+      <div class="publication-group-title">
+        Preprints
+      </div>
+
+
+      <div class="publication">
+
+        <div class="pub-title">
+          Quantum List Recovery and Decoding:
+          Achievability and Limitations
+        </div>
+
+        <div class="pub-authors">
+          Fernando Granha Jeronimo,
+          <strong>Xiaojuan Ma</strong>
+          (alphabetical order)
+        </div>
+
+        <div class="pub-venue">
+          Preprint, 2026
+        </div>
+
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2609.40262">
+            arXiv
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="publication">
+
+        <div class="pub-title">
+          From Random Quantum Codes to Explicit qLDPC Codes
+          via Local Properties
+        </div>
+
+        <div class="pub-authors">
+          Fernando Granha Jeronimo,
+          <strong>Xiaojuan Ma</strong>,
+          Nikhil Shagrithaya
+          (alphabetical order)
+        </div>
+
+        <div class="pub-venue">
+          Preprint, 2026
+        </div>
+
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2609.40252">
+            arXiv
+          </a>
+        </div>
+
+      </div>
+
     </div>
 
 
-    <!--
-      We will replace the placeholders below with the complete
-      publication list from your CV / existing website in one pass.
-    -->
 
+    <!-- Under review -->
 
-    <div class="publication">
+    <div class="publication-group">
 
-      <div class="pub-title">
-        Quantum List Recovery and List Decoding for CSS Codes:
-        Brascamp–Lieb Bounds and Coset Singleton Converses
+      <div class="publication-group-title">
+        Under Review
       </div>
 
-      <div class="pub-authors">
-        Xiaojuan Ma et al.
+
+      <div class="publication">
+
+        <div class="pub-title">
+          Quantum Workload Migration via Teleportation
+        </div>
+
+        <div class="pub-authors">
+          <strong>Xiaojuan Ma</strong>,
+          Indranil Gupta
+        </div>
+
       </div>
 
-      <div class="pub-venue">
-        Preprint
+
+      <div class="publication">
+
+        <div class="pub-title">
+          Quantum Network Link Layer Protocol Design
+        </div>
+
+        <div class="pub-authors">
+          <strong>Xiaojuan Ma</strong>,
+          Indranil Gupta
+        </div>
+
+      </div>
+
+
+      <div class="publication">
+
+        <div class="pub-title">
+          Designated Information Propagation
+        </div>
+
+        <div class="pub-authors">
+          <strong>Xiaojuan Ma</strong>*,
+          Yan Wang*,
+          Indranil Gupta
+          (*equal contribution)
+        </div>
+
+      </div>
+
+
+      <div class="publication">
+
+        <div class="pub-title">
+          Lightweight Congestion Control Routing
+          in LEO Satellite Networks
+        </div>
+
+        <div class="pub-authors">
+          Tianxiao Yang,
+          Evan Varghese,
+          <strong>Xiaojuan Ma</strong>,
+          Shashwat Jaiswal,
+          Indranil Gupta
+        </div>
+
       </div>
 
     </div>
 
 
-    <div class="publication">
 
-      <div class="pub-title">
-        Quantum networking research
+    <!-- Published -->
+
+    <div class="publication-group">
+
+      <div class="publication-group-title">
+        Published
       </div>
 
-      <div class="pub-authors">
-        Publication details to be added
+
+      <div class="publication">
+
+        <div class="pub-title">
+          Topology and Density Control of
+          Satellite-Defined Photonic Quantum Networks
+        </div>
+
+        <div class="pub-authors">
+          <strong>Xiaojuan Ma</strong>,
+          Indranil Gupta,
+          Yan Wang
+        </div>
+
+        <div class="pub-venue">
+          Physical Review Research, 2025
+        </div>
+
       </div>
 
-    </div>
 
+      <div class="publication">
 
-    <div class="publication">
+        <div class="pub-title">
+          Wainscot: Tailoring Model Parallelism
+          to Fit Device Memory Limits
+        </div>
 
-      <div class="pub-title">
-        LEO satellite network routing and scheduling
+        <div class="pub-authors">
+          <strong>Xiaojuan Ma</strong>,
+          Shashwat Jaiswal,
+          Chirag Shetty,
+          Chen-Wei Chou,
+          Kevin Zhang,
+          Indranil Gupta
+        </div>
+
+        <div class="pub-venue">
+          45th IEEE International Conference on
+          Distributed Computing Systems (ICDCS), 2025
+        </div>
+
       </div>
 
-      <div class="pub-authors">
-        Publication details to be added
+
+      <div class="publication">
+
+        <div class="pub-title">
+          There is More Control in Egalitarian Edge IoT Meshes
+        </div>
+
+        <div class="pub-authors">
+          Anna Karanika,
+          Rui Yang,
+          <strong>Xiaojuan Ma</strong>,
+          Jiangran Wang,
+          Shalni Sundram,
+          Indranil Gupta
+        </div>
+
+        <div class="pub-venue">
+          IEEE Transactions on Network and Service Management, 2025
+        </div>
+
       </div>
 
-    </div>
 
+      <div class="publication">
 
-    <div class="publication">
+        <div class="pub-title">
+          Information Explosion on Complex Networks and Control
+        </div>
 
-      <div class="pub-title">
-        Distributed systems and machine-learning systems
+        <div class="pub-authors">
+          <strong>Xiaojuan Ma</strong>,
+          Wen-Xu Wang,
+          Ying-Cheng Lai,
+          Zhigang Zheng
+        </div>
+
+        <div class="pub-venue">
+          European Physical Journal B 76, 179, 2010
+        </div>
+
       </div>
 
-      <div class="pub-authors">
-        Earlier publications to be added
+
+      <div class="publication">
+
+        <div class="pub-title">
+          Emergence of Loop Structure in Scale-Free Networks
+          and Dynamical Consequences
+        </div>
+
+        <div class="pub-authors">
+          <strong>Xiaojuan Ma</strong>,
+          Liang Huang,
+          Ying-Cheng Lai,
+          Zhigang Zheng
+        </div>
+
+        <div class="pub-venue">
+          Physical Review E 79, 056106, 2009
+        </div>
+
+      </div>
+
+
+      <div class="publication">
+
+        <div class="pub-title">
+          Synchronization-Based Scalability
+          of Complex Clustered Networks
+        </div>
+
+        <div class="pub-authors">
+          <strong>Xiaojuan Ma</strong>,
+          Liang Huang,
+          Ying-Cheng Lai,
+          Yan Wang,
+          Zhigang Zheng
+        </div>
+
+        <div class="pub-venue">
+          Chaos 18, 043109, 2008
+        </div>
+
       </div>
 
     </div>
@@ -607,42 +1030,257 @@
   </section>
 
 
+
   <!-- =========================================================
-       TEACHING
+       Teaching and Mentoring
        ========================================================= -->
 
   <section id="teaching">
 
-    <h2>Teaching</h2>
+    <h2>Teaching &amp; Mentoring</h2>
+
 
     <div class="teaching-item">
-      <strong>University of Illinois Urbana-Champaign</strong>
 
-      <div class="teaching-meta">
-        Teaching Assistant, Computer Science
+      <div class="teaching-heading">
+
+        <span class="teaching-title">
+          Teaching Assistant
+        </span>
+
+        <span class="teaching-date">
+          2021 – Present
+        </span>
+
       </div>
+
+      <div class="teaching-place">
+        University of Illinois Urbana-Champaign
+      </div>
+
+      <ul class="compact-list">
+        <li>
+          CS 425: Distributed Systems —
+          Lead TA for approximately 600 students
+        </li>
+        <li>
+          CS 525: Advanced Distributed Systems
+        </li>
+        <li>
+          CS 598 TDS: Topics in Distributed Systems
+        </li>
+        <li>
+          CS 438: Computer Networks —
+          nominated for Outstanding TA Award
+        </li>
+      </ul>
+
     </div>
 
-    <div class="teaching-item">
-      <strong>Earlier Teaching Experience</strong>
 
-      <div class="teaching-meta">
-        Physics teaching, curriculum development, and student mentoring
+    <div class="teaching-item">
+
+      <div class="teaching-heading">
+
+        <span class="teaching-title">
+          Research Mentor
+        </span>
+
+        <span class="teaching-date">
+          2024 – Present
+        </span>
+
       </div>
+
+      <div class="teaching-place">
+        University of Illinois Urbana-Champaign
+      </div>
+
+      <p>
+        Mentored undergraduate and graduate students on distributed
+        systems and networking research, including distributed
+        machine-learning training, congestion control for satellite
+        networks, and energy-aware satellite communication.
+      </p>
+
+      <p>
+        I have also co-mentored high-school summer interns on systems
+        projects for IoT and smart devices.
+      </p>
+
+    </div>
+
+
+    <div class="teaching-item">
+
+      <div class="teaching-heading">
+
+        <span class="teaching-title">
+          Teaching Assistant
+        </span>
+
+        <span class="teaching-date">
+          Fall 2020
+        </span>
+
+      </div>
+
+      <div class="teaching-place">
+        Iowa State University
+      </div>
+
+      <p>
+        Database Management Systems
+      </p>
+
+    </div>
+
+
+    <div class="teaching-item">
+
+      <div class="teaching-heading">
+
+        <span class="teaching-title">
+          Physics Teacher
+        </span>
+
+        <span class="teaching-date">
+          2010 – 2017
+        </span>
+
+      </div>
+
+      <div class="teaching-place">
+        High School Affiliated to Renmin University of China (RDFZ),
+        Beijing
+      </div>
+
+      <p>
+        I taught in both the standard and gifted and talented tracks,
+        served as a head teacher, contributed to specialized curriculum
+        development, designed research-oriented elective courses,
+        led the middle-school physics teaching team of the gifted and
+        talented program, and mentored junior teachers.
+      </p>
+
     </div>
 
   </section>
 
 
+
   <!-- =========================================================
-       FOOTER
+       Education
+       ========================================================= -->
+
+  <section id="education">
+
+    <h2>Education</h2>
+
+
+    <div class="education-item">
+
+      <div class="education-date">
+        2021 – Present
+      </div>
+
+      <div>
+        <div class="education-degree">
+          Ph.D. in Computer Science
+        </div>
+
+        University of Illinois Urbana-Champaign<br>
+
+        Advisor: Indranil Gupta ·
+        Expected Spring 2027
+      </div>
+
+    </div>
+
+
+    <div class="education-item">
+
+      <div class="education-date">
+        2018 – 2021
+      </div>
+
+      <div>
+        <div class="education-degree">
+          M.S. in Computer Science
+        </div>
+
+        Iowa State University
+      </div>
+
+    </div>
+
+
+    <div class="education-item">
+
+      <div class="education-date">
+        2003 – 2010
+      </div>
+
+      <div>
+        <div class="education-degree">
+          Ph.D. in Physics
+        </div>
+
+        Beijing Normal University
+      </div>
+
+    </div>
+
+
+    <div class="education-item">
+
+      <div class="education-date">
+        2007 – 2009
+      </div>
+
+      <div>
+        <div class="education-degree">
+          Visiting Ph.D. Student
+        </div>
+
+        Arizona State University
+      </div>
+
+    </div>
+
+
+    <div class="education-item">
+
+      <div class="education-date">
+        1999 – 2003
+      </div>
+
+      <div>
+        <div class="education-degree">
+          B.S. in Physics
+        </div>
+
+        Beijing Normal University
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       Footer
        ========================================================= -->
 
   <footer>
-    Xiaojuan Ma · University of Illinois Urbana-Champaign
+    Xiaojuan Ma ·
+    University of Illinois Urbana-Champaign
   </footer>
+
 
 </div>
 
 </body>
+
 </html>
