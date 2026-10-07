@@ -12,412 +12,7 @@
     content="Xiaojuan Ma — Ph.D. Candidate in Computer Science at the University of Illinois Urbana-Champaign. Research in quantum networking, quantum error correction, distributed systems, and systems for machine learning."
   >
 
-  <style>
-
-    :root {
-      --text: #222222;
-      --muted: #60656c;
-      --link: #245c9f;
-      --line: #dedede;
-      --soft: #f7f8fa;
-      --card-border: #d9dde3;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Helvetica,
-        Arial,
-        sans-serif;
-      color: var(--text);
-      background: white;
-      line-height: 1.65;
-      font-size: 16px;
-    }
-
-    .page {
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 70px 32px 80px;
-    }
-
-
-    /* =========================================================
-       Links
-       ========================================================= */
-
-    a {
-      color: var(--link);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-
-    /* =========================================================
-       Header
-       ========================================================= */
-
-    .profile-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 65px;
-      margin-bottom: 58px;
-    }
-
-    .profile-text {
-      flex: 1;
-      min-width: 0;
-    }
-
-    h1 {
-      margin: 0 0 12px;
-      font-size: 2.65rem;
-      line-height: 1.15;
-      font-weight: 650;
-      letter-spacing: -0.035em;
-    }
-
-    .subtitle {
-      margin-bottom: 18px;
-      font-size: 1.08rem;
-      line-height: 1.7;
-      color: var(--muted);
-    }
-
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px 20px;
-      margin-top: 8px;
-    }
-
-    .links a {
-      font-weight: 500;
-    }
-
-    .profile-photo {
-      width: 210px;
-      height: auto;
-      flex-shrink: 0;
-      display: block;
-      border-radius: 5px;
-    }
-
-
-    /* =========================================================
-       General sections
-       ========================================================= */
-
-    section {
-      margin-top: 50px;
-    }
-
-    h2 {
-      margin: 0 0 22px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--line);
-
-      font-size: 1.45rem;
-      line-height: 1.3;
-      font-weight: 650;
-      letter-spacing: -0.01em;
-    }
-
-    h3 {
-      margin: 0 0 7px;
-      font-size: 1.08rem;
-      line-height: 1.4;
-      font-weight: 650;
-    }
-
-    p {
-      margin: 0 0 16px;
-    }
-
-
-    /* =========================================================
-       About
-       ========================================================= */
-
-    .about p {
-      max-width: 850px;
-    }
-
-
-    /* =========================================================
-       Research interests
-       ========================================================= */
-
-    .research-focus {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      margin: 5px 0 20px;
-    }
-
-    .research-card {
-      padding: 20px 22px;
-      border: 1px solid var(--card-border);
-      border-radius: 7px;
-      background: white;
-    }
-
-    .research-card-title {
-      display: block;
-      margin-bottom: 4px;
-      font-size: 1.08rem;
-      font-weight: 650;
-    }
-
-    .research-card-text {
-      color: #444;
-    }
-
-    .broader {
-      margin: 19px 0 27px;
-      color: #444;
-    }
-
-    .research-description {
-      max-width: 850px;
-    }
-
-
-    /* =========================================================
-       Research experience
-       ========================================================= */
-
-    .experience-item {
-      margin-bottom: 29px;
-    }
-
-    .experience-item:last-child {
-      margin-bottom: 0;
-    }
-
-    .experience-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 20px;
-      margin-bottom: 6px;
-    }
-
-    .experience-heading h3 {
-      margin: 0;
-    }
-
-    .experience-date {
-      flex-shrink: 0;
-      color: var(--muted);
-      font-size: 0.93rem;
-    }
-
-    .experience-description {
-      margin-bottom: 6px;
-    }
-
-    .keywords {
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-
-    /* =========================================================
-       Publications
-       ========================================================= */
-
-    .publication-group {
-      margin-top: 30px;
-    }
-
-    .publication-group:first-of-type {
-      margin-top: 0;
-    }
-
-    .publication-group-title {
-      margin: 0 0 17px;
-      font-size: 1rem;
-      font-weight: 650;
-      color: #40444a;
-    }
-
-    .publication {
-      margin-bottom: 23px;
-    }
-
-    .publication:last-child {
-      margin-bottom: 0;
-    }
-
-    .pub-title {
-      margin-bottom: 3px;
-      font-weight: 600;
-      line-height: 1.5;
-    }
-
-    .pub-authors {
-      color: #4e5155;
-      line-height: 1.5;
-    }
-
-    .pub-venue {
-      margin-top: 2px;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    .pub-links {
-      margin-top: 3px;
-      font-size: 0.94rem;
-    }
-
-
-    /* =========================================================
-       Teaching and mentoring
-       ========================================================= */
-
-    .teaching-item {
-      margin-bottom: 25px;
-    }
-
-    .teaching-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 20px;
-      margin-bottom: 4px;
-    }
-
-    .teaching-title {
-      font-weight: 650;
-    }
-
-    .teaching-date {
-      flex-shrink: 0;
-      color: var(--muted);
-      font-size: 0.93rem;
-    }
-
-    .teaching-place {
-      margin-bottom: 5px;
-      color: #494d52;
-    }
-
-    .compact-list {
-      margin: 6px 0 0;
-      padding-left: 22px;
-    }
-
-    .compact-list li {
-      margin-bottom: 3px;
-    }
-
-
-    /* =========================================================
-       Education
-       ========================================================= */
-
-    .education-item {
-      display: grid;
-      grid-template-columns: 115px 1fr;
-      gap: 18px;
-      margin-bottom: 16px;
-    }
-
-    .education-date {
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    .education-degree {
-      font-weight: 600;
-    }
-
-
-    /* =========================================================
-       Footer
-       ========================================================= */
-
-    footer {
-      margin-top: 65px;
-      padding-top: 20px;
-      border-top: 1px solid var(--line);
-      color: #777;
-      font-size: 0.9rem;
-    }
-
-
-    /* =========================================================
-       Mobile
-       ========================================================= */
-
-    @media (max-width: 650px) {
-
-      .page {
-        padding: 38px 22px 60px;
-      }
-
-      .profile-header {
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        gap: 28px;
-        margin-bottom: 45px;
-      }
-
-      .profile-photo {
-        width: 160px;
-      }
-
-      h1 {
-        font-size: 2.2rem;
-      }
-
-      .subtitle {
-        font-size: 1rem;
-      }
-
-      section {
-        margin-top: 42px;
-      }
-
-      .research-focus {
-        grid-template-columns: 1fr;
-      }
-
-      .experience-heading,
-      .teaching-heading {
-        display: block;
-      }
-
-      .experience-date,
-      .teaching-date {
-        display: block;
-        margin-top: 2px;
-      }
-
-      .education-item {
-        grid-template-columns: 1fr;
-        gap: 2px;
-      }
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 
@@ -444,29 +39,17 @@
 
       <div class="links">
 
-        <a href="mailto:xm20@illinois.edu">
-          Email
-        </a>
+        <a href="mailto:xm20@illinois.edu">Email</a>
 
-        <a href="#research">
-          Research
-        </a>
+        <a href="#research">Research</a>
 
-        <a href="#publications">
-          Publications
-        </a>
+        <a href="#publications">Publications</a>
 
-        <a href="#teaching">
-          Teaching
-        </a>
+        <a href="#teaching">Teaching</a>
 
-        <a href="cv.pdf">
-          CV
-        </a>
+        <a href="cv.pdf">CV</a>
 
-        <a href="https://github.com/Xiaojuan-Ma">
-          GitHub
-        </a>
+        <a href="https://github.com/Xiaojuan-Ma">GitHub</a>
 
       </div>
 
@@ -749,8 +332,6 @@
     <h2>Selected Publications</h2>
 
 
-    <!-- Preprints -->
-
     <div class="publication-group">
 
       <div class="publication-group-title">
@@ -813,8 +394,6 @@
     </div>
 
 
-
-    <!-- Under review -->
 
     <div class="publication-group">
 
@@ -887,8 +466,6 @@
     </div>
 
 
-
-    <!-- Published -->
 
     <div class="publication-group">
 
@@ -1274,8 +851,7 @@
        ========================================================= -->
 
   <footer>
-    Xiaojuan Ma ·
-    University of Illinois Urbana-Champaign
+    Xiaojuan Ma · University of Illinois Urbana-Champaign
   </footer>
 
 
