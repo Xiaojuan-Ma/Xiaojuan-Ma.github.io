@@ -5,122 +5,272 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Xiaojuan Ma</title>
+  <meta name="description"
+        content="Xiaojuan Ma — Ph.D. Candidate in Computer Science at the University of Illinois Urbana-Champaign. Research in quantum networking, quantum computing, distributed systems, and networks.">
 
   <style>
+    :root {
+      --text: #222;
+      --muted: #5f6368;
+      --link: #245c9f;
+      --line: #dedede;
+      --soft: #f7f8fa;
+      --card-border: #d9dde3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                    Helvetica, Arial, sans-serif;
-      color: #222;
+      color: var(--text);
       background: #fff;
       line-height: 1.65;
+      font-size: 16px;
     }
 
     .page {
-      max-width: 900px;
+      max-width: 920px;
       margin: 0 auto;
-      padding: 70px 32px 100px;
+      padding: 70px 32px 80px;
     }
 
-    /* ---------- Header ---------- */
+    /* =========================================================
+       Links
+       ========================================================= */
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* =========================================================
+       Header
+       ========================================================= */
 
     .profile-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 60px;
-      margin-bottom: 60px;
+      gap: 65px;
+      margin-bottom: 58px;
     }
 
     .profile-text {
       flex: 1;
+      min-width: 0;
     }
 
     h1 {
-      font-size: 2.6rem;
-      margin: 0 0 10px;
-      font-weight: 600;
-      letter-spacing: -0.03em;
+      font-size: 2.65rem;
+      line-height: 1.15;
+      margin: 0 0 12px;
+      font-weight: 650;
+      letter-spacing: -0.035em;
     }
 
     .subtitle {
       font-size: 1.08rem;
-      color: #555;
+      color: var(--muted);
       line-height: 1.7;
       margin-bottom: 18px;
     }
 
     .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px 20px;
       margin-top: 8px;
     }
 
     .links a {
-      color: #245c9f;
-      text-decoration: none;
-      margin-right: 18px;
-    }
-
-    .links a:hover {
-      text-decoration: underline;
+      font-weight: 500;
     }
 
     .profile-photo {
       width: 210px;
-      height: 280px;
-      object-fit: cover;
-      object-position: center center;
+      height: auto;
+      flex-shrink: 0;
       border-radius: 5px;
+      display: block;
     }
 
-    /* ---------- General sections ---------- */
+    /* =========================================================
+       Sections
+       ========================================================= */
 
     section {
-      margin-top: 48px;
+      margin-top: 50px;
     }
 
     h2 {
       font-size: 1.45rem;
-      font-weight: 600;
-      margin: 0 0 20px;
-      padding-bottom: 7px;
-      border-bottom: 1px solid #ddd;
+      line-height: 1.3;
+      font-weight: 650;
+      margin: 0 0 22px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: 1.08rem;
+      line-height: 1.4;
+      margin: 0 0 7px;
+      font-weight: 650;
     }
 
     p {
       margin: 0 0 16px;
     }
 
-    /* ---------- Research interests ---------- */
+    /* =========================================================
+       About
+       ========================================================= */
+
+    .about p {
+      max-width: 850px;
+    }
+
+    /* =========================================================
+       Research Interests
+       ========================================================= */
 
     .research-focus {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 18px;
-      margin: 25px 0 22px;
+      margin: 5px 0 20px;
     }
 
     .research-card {
-      padding: 19px 22px;
-      border: 1px solid #ddd;
+      padding: 20px 22px;
+      border: 1px solid var(--card-border);
       border-radius: 7px;
+      background: #fff;
     }
 
-    .research-card strong {
+    .research-card-title {
       display: block;
-      font-size: 1.05rem;
-      margin-bottom: 5px;
+      font-size: 1.08rem;
+      font-weight: 650;
+      margin-bottom: 4px;
     }
 
-    .broader {
-      margin: 18px 0 27px;
+    .research-card-text {
       color: #444;
     }
 
-    /* ---------- Mobile ---------- */
+    .broader {
+      margin: 19px 0 27px;
+      color: #444;
+    }
+
+    .research-description {
+      max-width: 850px;
+    }
+
+    /* =========================================================
+       Research / Selected Work
+       ========================================================= */
+
+    .research-area {
+      margin: 0 0 30px;
+    }
+
+    .research-area p {
+      margin-bottom: 8px;
+    }
+
+    .area-label {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* =========================================================
+       Publications
+       ========================================================= */
+
+    .pub-note {
+      color: var(--muted);
+      margin-top: -8px;
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+
+    .publication {
+      margin-bottom: 23px;
+    }
+
+    .pub-title {
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 2px;
+    }
+
+    .pub-authors,
+    .pub-venue {
+      color: #4f4f4f;
+      line-height: 1.5;
+    }
+
+    .pub-links {
+      margin-top: 3px;
+      font-size: 0.94rem;
+    }
+
+    .pub-links a {
+      margin-right: 13px;
+    }
+
+    /* =========================================================
+       Teaching
+       ========================================================= */
+
+    .teaching-item {
+      margin-bottom: 18px;
+    }
+
+    .teaching-item strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .teaching-meta {
+      color: var(--muted);
+    }
+
+    /* =========================================================
+       Footer
+       ========================================================= */
+
+    footer {
+      margin-top: 65px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    /* =========================================================
+       Mobile
+       ========================================================= */
 
     @media (max-width: 650px) {
+
       .page {
-        padding: 40px 22px 70px;
+        padding: 38px 22px 60px;
       }
 
       .profile-header {
@@ -132,17 +282,26 @@
 
       .profile-photo {
         width: 160px;
-        height: 210px;
+        height: auto;
       }
 
       h1 {
         font-size: 2.2rem;
       }
 
+      .subtitle {
+        font-size: 1rem;
+      }
+
+      section {
+        margin-top: 42px;
+      }
+
       .research-focus {
         grid-template-columns: 1fr;
       }
     }
+
   </style>
 </head>
 
@@ -152,7 +311,7 @@
 <div class="page">
 
   <!-- =========================================================
-       Header
+       HEADER
        ========================================================= -->
 
   <header class="profile-header">
@@ -169,6 +328,7 @@
 
       <div class="links">
         <a href="mailto:xm20@illinois.edu">Email</a>
+        <a href="#publications">Publications</a>
         <a href="#">CV</a>
         <a href="#">Google Scholar</a>
         <a href="https://github.com/Xiaojuan-Ma">GitHub</a>
@@ -186,81 +346,301 @@
 
 
   <!-- =========================================================
-       About Me
+       ABOUT ME
        ========================================================= -->
 
-  <section>
+  <section class="about" id="about">
 
     <h2>About Me</h2>
 
     <p>
-      I am a Ph.D. candidate in Computer Science at the
-      University of Illinois Urbana-Champaign.
+      Hi, this is Xiaojuan, a Ph.D. student in the
+      <a href="http://dprg.cs.uiuc.edu/">
+        Distributed Protocols Research Group
+      </a>
+      (DPRG) at UIUC, working with
+      <strong>
+        Prof.
+        <a href="http://indy.cs.illinois.edu/">
+          Indranil Gupta
+        </a>
+      </strong>.
+      I am also working with
+      <strong>
+        Prof.
+        <a href="https://siebelschool.illinois.edu/about/people/faculty/granha">
+          Fernando Granha Jeronimo
+        </a>
+      </strong>
+      on quantum error correction and coding theory.
+    </p>
+
+    <p>
+      Before joining UIUC, I earned a
+      <strong>Ph.D. in Physics</strong>
+      from Beijing Normal University and a
+      <strong>Master's degree in Computer Science</strong>
+      from Iowa State University.
     </p>
 
   </section>
 
 
   <!-- =========================================================
-       Research Interests
+       RESEARCH INTERESTS
        ========================================================= -->
 
-  <section>
+  <section id="research-interests">
 
     <h2>Research Interests</h2>
 
     <div class="research-focus">
 
       <div class="research-card">
-        <strong>Quantum Networking</strong>
-        Protocol design across quantum network layers
+        <span class="research-card-title">
+          Quantum Networking
+        </span>
+
+        <span class="research-card-text">
+          Protocol design across quantum network layers
+        </span>
       </div>
 
+
       <div class="research-card">
-        <strong>Quantum Computing</strong>
-        Quantum error correction and coding theory
+        <span class="research-card-title">
+          Quantum Computing
+        </span>
+
+        <span class="research-card-text">
+          Quantum error correction and coding theory
+        </span>
       </div>
 
     </div>
+
 
     <div class="broader">
       <strong>Broader interests:</strong>
-      Distributed systems and networks · Systems for machine learning
+      Distributed systems and networks ·
+      Systems for machine learning
     </div>
 
-    <p>
-      Much of my research asks how local structure and constraints
-      give rise to global behavior and information-processing
-      capabilities. This perspective originated in my earlier Ph.D.
-      work on complex networks, carried into my research on distributed
-      systems and machine-learning systems, and now informs my work in
-      quantum networking and quantum coding.
-    </p>
 
-    <p>
-      In quantum networking, I study how underlying network topology
-      and hardware constraints interact with higher-layer routing,
-      protocols, and applications. In quantum coding, I investigate
-      how local algebraic and combinatorial structure shapes global
-      code properties and error-correction guarantees.
-    </p>
+    <div class="research-description">
+
+      <p>
+        Much of my research asks how local structure and constraints
+        give rise to global behavior and information-processing
+        capabilities. This perspective originated in my earlier
+        Ph.D. work on complex networks, carried into my research
+        on distributed systems and machine-learning systems, and
+        now informs my work in quantum networking and quantum coding.
+      </p>
+
+      <p>
+        In quantum networking, I study how underlying network
+        topology and hardware constraints interact with higher-layer
+        routing, protocols, and applications. In quantum coding,
+        I investigate how local algebraic and combinatorial structure
+        shapes global code properties and error-correction guarantees.
+      </p>
+
+    </div>
 
   </section>
 
 
   <!-- =========================================================
-       Publications
+       RESEARCH
        ========================================================= -->
 
-  <section>
+  <section id="research">
+
+    <h2>Research</h2>
+
+
+    <div class="research-area">
+
+      <h3>Quantum Networking</h3>
+
+      <p>
+        I study quantum networks across multiple layers, from physical
+        entanglement connectivity to network protocols, routing, and
+        distributed applications.
+      </p>
+
+      <div class="area-label">
+        Quantum network topology · Entanglement distribution ·
+        Routing and scheduling · Distributed quantum protocols
+      </div>
+
+    </div>
+
+
+    <div class="research-area">
+
+      <h3>Quantum Error Correction and Coding Theory</h3>
+
+      <p>
+        I study coding-theoretic questions motivated by fault-tolerant
+        quantum computing, with a focus on structural properties that
+        govern decoding and list-recovery guarantees.
+      </p>
+
+      <div class="area-label">
+        Quantum error correction · CSS codes · Quantum list decoding ·
+        Quantum list recovery
+      </div>
+
+    </div>
+
+
+    <div class="research-area">
+
+      <h3>Distributed Systems and Networks</h3>
+
+      <p>
+        My systems research studies how network structure and resource
+        constraints affect distributed computation, communication,
+        routing, and scheduling.
+      </p>
+
+      <div class="area-label">
+        Distributed systems · Networked systems ·
+        Satellite networks · Edge systems
+      </div>
+
+    </div>
+
+
+    <div class="research-area">
+
+      <h3>Systems for Machine Learning</h3>
+
+      <p>
+        I am also interested in systems techniques that exploit
+        structure in distributed machine-learning workloads to improve
+        efficiency and resource utilization.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       PUBLICATIONS
+       ========================================================= -->
+
+  <section id="publications">
 
     <h2>Publications</h2>
 
-    <p>
-      Publications will go here.
-    </p>
+    <div class="pub-note">
+      Selected publications and preprints.
+    </div>
+
+
+    <!--
+      We will replace the placeholders below with the complete
+      publication list from your CV / existing website in one pass.
+    -->
+
+
+    <div class="publication">
+
+      <div class="pub-title">
+        Quantum List Recovery and List Decoding for CSS Codes:
+        Brascamp–Lieb Bounds and Coset Singleton Converses
+      </div>
+
+      <div class="pub-authors">
+        Xiaojuan Ma et al.
+      </div>
+
+      <div class="pub-venue">
+        Preprint
+      </div>
+
+    </div>
+
+
+    <div class="publication">
+
+      <div class="pub-title">
+        Quantum networking research
+      </div>
+
+      <div class="pub-authors">
+        Publication details to be added
+      </div>
+
+    </div>
+
+
+    <div class="publication">
+
+      <div class="pub-title">
+        LEO satellite network routing and scheduling
+      </div>
+
+      <div class="pub-authors">
+        Publication details to be added
+      </div>
+
+    </div>
+
+
+    <div class="publication">
+
+      <div class="pub-title">
+        Distributed systems and machine-learning systems
+      </div>
+
+      <div class="pub-authors">
+        Earlier publications to be added
+      </div>
+
+    </div>
 
   </section>
+
+
+  <!-- =========================================================
+       TEACHING
+       ========================================================= -->
+
+  <section id="teaching">
+
+    <h2>Teaching</h2>
+
+    <div class="teaching-item">
+      <strong>University of Illinois Urbana-Champaign</strong>
+
+      <div class="teaching-meta">
+        Teaching Assistant, Computer Science
+      </div>
+    </div>
+
+    <div class="teaching-item">
+      <strong>Earlier Teaching Experience</strong>
+
+      <div class="teaching-meta">
+        Physics teaching, curriculum development, and student mentoring
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer>
+    Xiaojuan Ma · University of Illinois Urbana-Champaign
+  </footer>
 
 </div>
 
