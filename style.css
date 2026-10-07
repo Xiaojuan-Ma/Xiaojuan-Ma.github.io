@@ -10,7 +10,7 @@
   --section-title: #355f7d;
   --subsection-title: #3d6179;
 
-  --line: #cdd9e2;
+  --line: #b2c3d1;
   --soft: #eef3f7;
   --card-border: #d4dde5;
 }
@@ -158,7 +158,7 @@ h2 {
   margin: 0 0 22px;
   padding-bottom: 9px;
 
-  border-bottom: 1px solid var(--line);
+  border-bottom: 2px solid var(--line);
 
   color: var(--section-title);
 
