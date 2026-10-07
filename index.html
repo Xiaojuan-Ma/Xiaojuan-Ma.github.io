@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Xiaojuan Ma</title>
 
   <style>
@@ -21,13 +22,23 @@
       padding: 70px 32px 100px;
     }
 
-    header {
-      margin-bottom: 55px;
+    /* ---------- Header ---------- */
+
+    .profile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+
+    .profile-text {
+      flex: 1;
     }
 
     h1 {
       font-size: 2.6rem;
-      margin: 0 0 8px;
+      margin: 0 0 10px;
       font-weight: 600;
       letter-spacing: -0.03em;
     }
@@ -35,7 +46,12 @@
     .subtitle {
       font-size: 1.08rem;
       color: #555;
-      margin-bottom: 12px;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .links {
+      margin-top: 8px;
     }
 
     .links a {
@@ -48,6 +64,16 @@
       text-decoration: underline;
     }
 
+    .profile-photo {
+      width: 210px;
+      height: 280px;
+      object-fit: cover;
+      object-position: center center;
+      border-radius: 5px;
+    }
+
+    /* ---------- General sections ---------- */
+
     section {
       margin-top: 48px;
     }
@@ -55,7 +81,7 @@
     h2 {
       font-size: 1.45rem;
       font-weight: 600;
-      margin-bottom: 20px;
+      margin: 0 0 20px;
       padding-bottom: 7px;
       border-bottom: 1px solid #ddd;
     }
@@ -63,6 +89,8 @@
     p {
       margin: 0 0 16px;
     }
+
+    /* ---------- Research interests ---------- */
 
     .research-focus {
       display: grid;
@@ -88,43 +116,81 @@
       color: #444;
     }
 
+    /* ---------- Mobile ---------- */
+
     @media (max-width: 650px) {
       .page {
         padding: 40px 22px 70px;
       }
 
-      .research-focus {
-        grid-template-columns: 1fr;
+      .profile-header {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 28px;
+        margin-bottom: 45px;
+      }
+
+      .profile-photo {
+        width: 160px;
+        height: 210px;
       }
 
       h1 {
         font-size: 2.2rem;
       }
+
+      .research-focus {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
+
 <body>
+
 <div class="page">
 
-  <header>
-    <h1>Xiaojuan Ma</h1>
+  <!-- =========================================================
+       Header
+       ========================================================= -->
 
-    <div class="subtitle">
-      Ph.D. Candidate in Computer Science<br>
-      University of Illinois Urbana-Champaign
+  <header class="profile-header">
+
+    <div class="profile-text">
+
+      <h1>Xiaojuan Ma</h1>
+
+      <div class="subtitle">
+        Ph.D. Candidate in Computer Science<br>
+        Siebel School of Computing and Data Science<br>
+        University of Illinois Urbana-Champaign
+      </div>
+
+      <div class="links">
+        <a href="mailto:xm20@illinois.edu">Email</a>
+        <a href="#">CV</a>
+        <a href="#">Google Scholar</a>
+        <a href="https://github.com/Xiaojuan-Ma">GitHub</a>
+      </div>
+
     </div>
 
-    <div class="links">
-      <a href="#">Email</a>
-      <a href="#">CV</a>
-      <a href="#">Google Scholar</a>
-      <a href="#">GitHub</a>
-    </div>
+    <img
+      class="profile-photo"
+      src="xiaojuan%20copy.png"
+      alt="Xiaojuan Ma"
+    >
+
   </header>
 
 
+  <!-- =========================================================
+       About Me
+       ========================================================= -->
+
   <section>
+
     <h2>About Me</h2>
 
     <p>
@@ -132,13 +198,15 @@
       University of Illinois Urbana-Champaign.
     </p>
 
-    <p>
-      <!-- We will replace this with your complete About Me text. -->
-    </p>
   </section>
 
 
+  <!-- =========================================================
+       Research Interests
+       ========================================================= -->
+
   <section>
+
     <h2>Research Interests</h2>
 
     <div class="research-focus">
@@ -176,17 +244,25 @@
       how local algebraic and combinatorial structure shapes global
       code properties and error-correction guarantees.
     </p>
+
   </section>
 
 
+  <!-- =========================================================
+       Publications
+       ========================================================= -->
+
   <section>
+
     <h2>Publications</h2>
 
     <p>
       Publications will go here.
     </p>
+
   </section>
 
 </div>
+
 </body>
 </html>
