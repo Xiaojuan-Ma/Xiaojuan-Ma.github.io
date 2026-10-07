@@ -4,13 +4,17 @@
 
   --link: #315f8c;
 
+  /* Page colors */
   --page-bg: #f4ebe3;
   --content-bg: #ffffff;
 
+  /* Headings */
   --section-title: #355f7d;
-  --subsection-title: #3d6179;
+  --subsection-title: #4d6f86;
 
-  --line: #E87722;
+  /* UIUC-style accent */
+  --line: #e87722;
+
   --soft: #eef3f7;
   --card-border: #d4dde5;
 }
@@ -52,18 +56,18 @@ body {
    ========================================================= */
 
 .page {
-  max-width: 920px;
+  max-width: 1050px;
   margin: 36px auto;
 
   padding: 60px 48px 70px;
 
   background: var(--content-bg);
 
-  border-radius: 8px;
+  border-radius: 10px;
 
   box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.04),
-    0 8px 30px rgba(0, 0, 0, 0.035);
+    0 2px 6px rgba(0, 0, 0, 0.04),
+    0 10px 30px rgba(0, 0, 0, 0.04);
 }
 
 
@@ -158,7 +162,7 @@ h2 {
   margin: 0 0 22px;
   padding-bottom: 9px;
 
-  border-bottom: 2px solid var(--line);
+  border-bottom: 1.5px solid var(--line);
 
   color: var(--section-title);
 
@@ -259,9 +263,12 @@ p {
   color: var(--muted);
 
   font-size: 0.93rem;
+  font-weight: 400;
 }
 
 .experience-description {
+  max-width: 850px;
+
   margin-bottom: 6px;
 }
 
@@ -334,12 +341,16 @@ p {
    ========================================================= */
 
 .teaching-item {
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .teaching-item:last-child {
   margin-bottom: 0;
 }
+
+
+/* Main role:
+   Physics Teacher / Teaching Assistant / Research Mentor */
 
 .teaching-heading {
   display: flex;
@@ -348,31 +359,44 @@ p {
 
   gap: 20px;
 
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .teaching-title {
+  font-size: 1.08rem;
   font-weight: 700;
 
-  color: #2f3d47;
+  color: #263746;
 }
+
+
+/* Dates */
 
 .teaching-date {
   flex-shrink: 0;
 
-  color: var(--muted);
+  color: #6f7780;
 
   font-size: 0.93rem;
+  font-weight: 400;
 }
+
+
+/* Institution underneath a main role */
 
 .teaching-place {
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 
-  color: #494d52;
+  color: var(--subsection-title);
+
+  font-weight: 600;
 }
 
+
+/* Subitems under Teaching Assistant */
+
 .teaching-subitem {
-  margin-top: 16px;
+  margin-top: 18px;
   margin-left: 20px;
 }
 
@@ -383,12 +407,18 @@ p {
 
   gap: 20px;
 
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .teaching-subheading strong {
-  color: #3c4f5d;
+  color: var(--subsection-title);
+
+  font-size: 1rem;
+  font-weight: 700;
 }
+
+
+/* Lists */
 
 .compact-list {
   margin: 6px 0 0;
@@ -397,7 +427,7 @@ p {
 }
 
 .compact-list li {
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 
@@ -437,7 +467,7 @@ footer {
 
   padding-top: 20px;
 
-  border-top: 1px solid var(--line);
+  border-top: 1px solid #d8d8d8;
 
   color: #777;
 
@@ -450,6 +480,10 @@ footer {
    ========================================================= */
 
 @media (max-width: 650px) {
+
+  body {
+    background: var(--content-bg);
+  }
 
   .page {
     margin: 0;
@@ -500,7 +534,7 @@ footer {
   .teaching-date {
     display: block;
 
-    margin-top: 2px;
+    margin-top: 3px;
   }
 
   .teaching-subitem {
